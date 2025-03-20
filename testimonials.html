@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos - DevSpace</title>
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 10%, #2D1B69 60%, #1a1a1a 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .scroll-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow: auto;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            margin-top: 2vh;
+        }
+        .close {
+            position: absolute;
+            right: 32px;
+            top: 32px;
+            width: 32px;
+            height: 32px;
+            opacity: 0.8;
+            cursor: pointer;
+            color: white;
+            font-size: 30px;
+        }
+        .close:hover {
+            opacity: 1;
+        }
+        .image-container {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .image-container:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-8 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+            <a href="index.html" class="inline-flex items-center">
+                <img src="./img/logo.png" alt="DevSpace Logo" class="h-8 w-auto">
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4 md:px-8 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-12">Depoimentos dos Alunos</h1>
+
+            <!-- Entrevistas Section -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold mb-4">Entrevistas</h2>
+                <p class="text-gray-300 mb-8">Nossos alunos são chamados para entrevistas enquanto estão estudando, nossa metodologia dá resultados.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="w-full">
+                        <img src="./img/entrevista1.jpeg" alt="Entrevista 1" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista2.jpeg" alt="Entrevista 2" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista3.jpeg" alt="Entrevista 3" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista4.jpeg" alt="Entrevista 4" class="w-full rounded-lg shadow-lg">
+                    </div>
+                  
+                    <div class="w-full col-span-1 space-y-6">
+                        <div class="w-full">
+                            <img src="./img/entrevista5.PNG" alt="Entrevista 5" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div>
+                            <img src="./img/entrevista6.JPG" alt="Entrevista 6" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div>
+                            <img src="./img/entrevista7.JPG" alt="Entrevista 7" class="w-full rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                    <div class="w-full col-span-1 space-y-6">
+                        <div>
+                            <img src="./img/entrevista9.jpeg" alt="Entrevista 6" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div>
+                            <img src="./img/entrevista11.jpeg" alt="Entrevista 7" class="w-full rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista8.jpeg" alt="Entrevista 8" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista10.jpeg" alt="Entrevista 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista10.jpeg" alt="Entrevista 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista10.jpeg" alt="Entrevista 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="w-full">
+                        <img src="./img/entrevista10.jpeg" alt="Entrevista 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Didática Section -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold mb-4">Contratados</h2>
+                <p class="text-gray-300 mb-8">Veja alguns de nossos alunos que foram contratados pelas empresas.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="image-container">
+                        <img src="./img/vaga1.png" alt="Vaga 1" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga2.png" alt="Vaga 2" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga3.png" alt="Vaga 3" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga4.png" alt="Vaga 4" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga5.png" alt="Vaga 5" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga6.png" alt="Vaga 6" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga7.png" alt="Vaga 7" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga8.png" alt="Vaga 8" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga9.png" alt="Vaga 9" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga10.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga11.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga12.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga13.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/vaga14.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+           <!-- Apps Section -->
+           <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-4">Aplicativos</h2>
+            <p class="text-gray-300 mb-8">Veja alguns dos aplicativos feitos por nossos Alunos</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="image-container">
+                    <img src="./img/app1.png" alt="Vaga 1" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app2.png" alt="Vaga 2" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app3.png" alt="Vaga 3" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app4.png" alt="Vaga 4" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app5.png" alt="Vaga 5" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app6.png" alt="Vaga 6" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app7.png" alt="Vaga 7" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app8.png" alt="Vaga 8" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app9.png" alt="Vaga 9" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app10.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app11.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app12.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app13.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app14.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app15.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>  
+                <div class="image-container">
+                    <img src="./img/app16.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="image-container">
+                    <img src="./img/app17.png" alt="Vaga 10" class="w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 bg-opacity-50 bg-black">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4 text-white">Viu quanta coisa</h2>
+            <p class="text-xl text-gray-300 mb-8">Isso é o que te espera dentro da comunidade devspace, vem aprender com a gente.</p>
+            <a href="https://wa.me/your-number" class="inline-flex items-center px-8 py-4 bg-green-500 text-white rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors shadow-lg">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Quero fazer parte
+            </a>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 md:px-8 lg:px-16 mt-12">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>&copy; 2024 DevSpace. Todos os direitos reservados.</p>
+            <a href="privacy.html" class="text-purple-400 hover:text-purple-300 mt-4 inline-block">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/your-number" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        // Add click event to all images
+        document.querySelectorAll('.image-container img').forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Close modal when clicking the × button
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html> 
